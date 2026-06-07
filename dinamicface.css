@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a14;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.ecra {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(211, 0, 0);
+    width: 500px;
+    height: 98vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 30px rgba(211, 0, 0, 0.3);
+}
+
+.nas {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(111, 103, 160);
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.vid {
+    width: 100%;
+    height: 250px;
+    background-color: #1a1a2e;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* Двигающийся фон */
+.moving-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; 
+    height: 100%;
+    background-image: url('picsel.png');
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    animation: bgScroll 8s linear infinite;
+    z-index: 0;
+}
+
+@keyframes bgScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Hero */
+.hero-img {
+    position: absolute;
+    bottom: -130px;
+    left: 5%;
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    z-index: 2;
+    animation: heroBounce 1s ease-in-out infinite alternate;
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.5));
+}
+
+@keyframes heroBounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+/* Второй персонаж */
+.char2-img {
+    position: absolute;
+    bottom: -150px;
+    right: 15%;
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    z-index: 2;
+    animation: charBounce 1.9s ease-in-out 0.2s infinite alternate;
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.5));
+}
+
+@keyframes charBounce {
+    0% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+.sistem {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(38, 53, 92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+}
+
+.foto {
+    width: 45px;
+    height: 45px;
+    margin-top: 2px;
+    margin-left: 2px;
+    cursor: context-menu;
+    border-radius: 50%;
+    background-color: #aaa;
+    border: 2px solid #fff;
+}
+
+.name {
+    margin-left: 12px;
+    cursor: default;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nema {
+    margin-left: 10px;
+    font-size: 14px;
+    color: blanchedalmond;
+    cursor: default;
+    flex-grow: 1;
+}
+
+.nastroy {
+    margin-left: auto;
+    margin-right: 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.nastroy:hover {
+    transform: rotate(90deg);
+}
+
+.but {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.story {
+    border: 2px solid rgb(225, 225, 93);
+    width: 470px;
+    height: 410px;
+    border-radius: 5%;
+    background-color: #48496b;
+    padding: 25px 20px;
+    box-shadow: 
+        inset 0 0 20px rgba(0,0,0,0.3),
+        0 0 15px rgba(225, 225, 93, 0.2);
+    position: relative;
+    
+    overflow-y: auto;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+.story::-webkit-scrollbar {
+    display: none;
+}
+
+.story-text {
+    color: #f0e68c;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    line-height: 1.7;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+    margin: 0;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.story-text::after {
+    content: " ▌";
+    animation: blink 0.8s step-end infinite;
+    color: #ffd700;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

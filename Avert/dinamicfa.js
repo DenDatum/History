@@ -219,6 +219,6 @@
         }, { passive: false });
 
         window.addEventListener('load', () => {
-            setTimeout(typeLine, 1000);
+            setTimeout(typeLine, 2000);
         });
     

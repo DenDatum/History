@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         {
-            file: "dombyr.jpg", 
+            file: "barnabi.jpg", 
             title: "Досье №5: Домбур Камневич Торин",
             desc: "Гном-мажордом. Невозмутимо выполняет хозяйские инструкции, водил Матера служебным коридором.",
             sub: "Жив"
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sub: "Мёртв"
         },
         {
-            file: "barnabi.jpg", 
+            file: "dombyr.jpg", 
             title: "Досье №29: Барнаби Кристофер Гроув",
             desc: "Хозяин заведения «У старого дуба».",
             sub: "Жив"
